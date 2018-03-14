@@ -9,10 +9,25 @@
 import UIKit
 import MapKit
 
-class PhotoMapViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, MKMapViewDelegate, LocationsViewControllerDelegate
+protocol PhotoMapViewControllerDelegate : class
 {
+    func locationsPickedLocation(controller: PhotoMapViewController, latitude: NSNumber, longitude: NSNumber)
+
+}
+
+class PhotoMapViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, MKMapViewDelegate,
+    LocationsViewControllerDelegate
+    {
+    
+    func locationsPickedLocation(controller: LocationsViewController, latitude: NSNumber, longitude: NSNumber) {
+        self.navigationController?.popViewController(animated: true)
+    }
     
     
+    
+    
+    
+
     
     @IBOutlet weak var cameraButton: UIButton!
     
@@ -86,7 +101,8 @@ class PhotoMapViewController: UIViewController, UIImagePickerControllerDelegate,
         // Dispose of any resources that can be recreated.
     }
     
-    func locationsPickedLocation(controller: LocationsViewController, latitude: NSNumber, longitude: NSNumber, locationName: String) {
+    func locationsPickedLocation(controller: LocationsViewController, latitude: NSNumber, longitude: NSNumber, locationName: String)
+    {
         
         // pop the LocationsViewController from the view stack and show the PhotoMapViewController
         self.navigationController?.popViewController(animated: true)
@@ -94,7 +110,9 @@ class PhotoMapViewController: UIViewController, UIImagePickerControllerDelegate,
         // Get the location coordinates from the Lat. and Long. passed from the delegate/protocol
         let locationCoordinate2D = CLLocationCoordinate2DMake(CLLocationDegrees(latitude), CLLocationDegrees(longitude));
         
-        let annotation = PhotoAnnotation();
+        
+        let annotation = MKPointAnnotation();
+
         
         // set the coordinates of that point using the coordinate defined above
         annotation.coordinate = locationCoordinate2D
@@ -102,9 +120,7 @@ class PhotoMapViewController: UIViewController, UIImagePickerControllerDelegate,
          annotation.title = locationName;
         
         // add the annotation to the MKMapView
-        annotation.append(annotation)
-        
-        mapView.addAnnotations(annotation);
+        mapView.addAnnotation(annotation)
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
@@ -127,6 +143,9 @@ class PhotoMapViewController: UIViewController, UIImagePickerControllerDelegate,
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.

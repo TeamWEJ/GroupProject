@@ -13,7 +13,7 @@
         <!--Photo Map View Controller-->
         <scene sceneID="Eh3-Ch-REm">
             <objects>
-                <viewController id="ghP-Ww-KKQ" customClass="PhotoMapViewController" sceneMemberID="viewController">
+                <viewController id="ghP-Ww-KKQ" customClass="PhotoMapViewController" customModule="Photo_Map" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vrG-Wc-0bn"/>
                         <viewControllerLayoutGuide type="bottom" id="ufw-e1-uLx"/>
@@ -22,26 +22,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIy-U3-a8x">
-                                <rect key="frame" x="156" y="603" width="62" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="camera"/>
-                                <connections>
-                                    <action selector="didTapCamera:" destination="ghP-Ww-KKQ" eventType="touchUpInside" id="hHQ-eR-OMN"/>
-                                </connections>
-                            </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9K9-tr-Lcr">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIy-U3-a8x">
+                                <rect key="frame" x="156" y="567" width="62" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="camera"/>
+                                <connections>
+                                    <action selector="didTapCamera:" destination="ghP-Ww-KKQ" eventType="touchUpInside" id="ehd-Yr-qac"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="aPF-0T-Ydb"/>
                     <connections>
-                        <outlet property="cameraButton" destination="eIy-U3-a8x" id="Ntq-0b-Hib"/>
-                        <outlet property="didTapCamera" destination="eIy-U3-a8x" id="C0D-JH-8FU"/>
-                        <outlet property="mapView" destination="9K9-tr-Lcr" id="HWq-t3-Ntr"/>
+                        <outlet property="cameraButton" destination="eIy-U3-a8x" id="sc3-WF-ZjP"/>
+                        <outlet property="mapView" destination="9K9-tr-Lcr" id="sYc-wn-2RE"/>
                         <segue destination="eZf-Nb-6PU" kind="push" identifier="tagSegue" id="Tzv-N2-17x"/>
                         <segue destination="WeT-38-qba" kind="push" identifier="fullImageSegue" id="B5X-dM-HfZ"/>
                     </connections>

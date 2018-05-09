@@ -3,15 +3,15 @@
 
 **FoodScan** is a food app that allows a user to take a photo of a specific food to determine the nutritional value of the aforementioned item, as well as determining where said food item can be located using a map integrated into the app.
 
-Time spent: **X** hours spent in total
+Time spent: **4** weeks spent in total
 
 ## User Stories
 
 The following **required** functionality is completed:
 
 
-- [ ] User can take a photo of food to determine name and nutritional value of said food item
-- [ ] Map added to see where certain foods can be purchased
+- [x] User can take a photo of food to determine name and nutritional value of said food item
+- [ ] Map added to see where certain foods can be purchased (The google map  API aka Google Map Place Picker class was deprecated on May 1st so we were unable to implement our map) 
 
 The following **stretch** features are implemented:
 

@@ -11,7 +11,7 @@ The following **required** functionality is completed:
 
 
 - [x] User can take a photo of food to determine name and nutritional value of said food item
-- [ ] Map added to see where certain foods can be purchased (The google map  API aka Google Map Place Picker class was deprecated on May 1st so we were unable to implement our map) 
+- [ ] Map added to see where certain foods can be purchased **(The google map  API aka Google Map Place Picker class was deprecated on May 1st so we were unable to implement our map)** 
 
 The following **stretch** features are implemented:
 

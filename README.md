@@ -109,6 +109,6 @@ This app demonstrates how to use the [Cloud Vision API](https://cloud.google.com
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://i.imgur.com/WIMQkC1.gifv' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://i.imgur.com/WIMQkC1.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).

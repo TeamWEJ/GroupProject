@@ -105,3 +105,10 @@ This app demonstrates how to use the [Cloud Vision API](https://cloud.google.com
 [api-key]: https://console.cloud.google.com/apis/credentials?project=_
 [cocoapods]: https://cocoapods.org/
 [rubygems]: https://rubygems.org/pages/download
+## Video Walkthrough
+
+Here's a walkthrough of implemented user stories:
+
+<img src='https://i.imgur.com/WIMQkC1.gifv' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+GIF created with [LiceCap](http://www.cockos.com/licecap/).
